@@ -1,0 +1,6 @@
+[package]
+name = "linalgesic"
+version = "0.1.0"
+authors = ["Woodrow Barlow <wjbarlow@ncsu.edu>"]
+
+[dependencies]
