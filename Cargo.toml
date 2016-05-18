@@ -2,5 +2,15 @@
 name = "linalgesic"
 version = "0.1.0"
 authors = ["Woodrow Barlow <wjbarlow@ncsu.edu>"]
+description = "A Rust library to make linear algebra painless."
+homepage = "https://woodrowbarlow.github.io/linalgesic"
+documentation = "https://woodrowbarlow.github.io/linalgesic/doc"
+repository = "https://github.com/woodrowbarlow/linalgesic"
+readme = "README.md"
+keywords = ["linear algebra", "matrix", "math"]
+license = "MIT"
+# this package is not yet ready to be published
+publish = false
 
 [dependencies]
+# (none yet)
