@@ -1,4 +1,11 @@
-fn mult(r : Vec<i32>, k : i32) -> Vec<i32> {
+//! LINALGESIC
+//! A rust library to make linear algebra painless.
+//!
+//! Author: Woodrow Barlow
+//! License: MIT
+
+/// Multiply a row by a scalar.
+fn mult(r : Vec<f32>, k : f32) -> Vec<f32> {
     let mut r_prime = Vec::new();
     for i in 1..r.len() {
         r_prime.push(r[i] * k);
@@ -6,7 +13,17 @@ fn mult(r : Vec<i32>, k : i32) -> Vec<i32> {
     return r_prime;
 }
 
-fn add(r1 : Vec<i32>, r2 : Vec<i32>) -> Vec<i32> {
+/// Divide a row by a scalar.
+fn div(r : Vec<f32>, k : f32) -> Vec<f32> {
+    let mut r_prime = Vec::new();
+    for i in 1..r.len() {
+        r_prime.push(r[i] / k);
+    }
+    return r_prime;
+}
+
+/// Add the second row to the first row.
+fn add(r1 : Vec<f32>, r2 : Vec<f32>) -> Vec<f32> {
     let mut r_prime = Vec::new();
     if r1.len() != r2.len() {
         panic!("incompatible row width");
@@ -17,7 +34,8 @@ fn add(r1 : Vec<i32>, r2 : Vec<i32>) -> Vec<i32> {
     return r_prime;
 }
 
-fn sub(r1 : Vec<i32>, r2 : Vec<i32>) -> Vec<i32> {
+/// Subtract the second row from the first row.
+fn sub(r1 : Vec<f32>, r2 : Vec<f32>) -> Vec<f32> {
     let mut r_prime = Vec::new();
     if r1.len() != r2.len() {
         panic!("incompatible row width");
@@ -28,7 +46,8 @@ fn sub(r1 : Vec<i32>, r2 : Vec<i32>) -> Vec<i32> {
     return r_prime;
 }
 
-fn add_with_coeff(r1 : Vec<i32>, r2 : Vec<i32>, k : i32) -> Vec<i32> {
+/// Multiply the second row by a scalar and add the result to the first row.
+fn add_with_coeff(r1 : Vec<f32>, r2 : Vec<f32>, k : f32) -> Vec<f32> {
     let mut r_prime = Vec::new();
     if r1.len() != r2.len() {
         panic!("incompatible row width");
@@ -39,7 +58,8 @@ fn add_with_coeff(r1 : Vec<i32>, r2 : Vec<i32>, k : i32) -> Vec<i32> {
     return r_prime;
 }
 
-fn sub_with_coeff(r1 : Vec<i32>, r2 : Vec<i32>, k : i32) -> Vec<i32> {
+/// Multiply the second row by a scalaer and subtract the result from the first row.
+fn sub_with_coeff(r1 : Vec<f32>, r2 : Vec<f32>, k : f32) -> Vec<f32> {
     let mut r_prime = Vec::new();
     if r1.len() != r2.len() {
         panic!("incompatible row width");
